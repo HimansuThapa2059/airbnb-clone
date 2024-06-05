@@ -16,13 +16,13 @@ const UserMenu: FC = () => {
       <div className="flex items-center gap-3">
         <div
           onClick={() => {}}
-          className="hidden md:block text-sm py-3 px-4 transition cursor-pointer font-semibold rounded-full hover:bg-neutral-100"
+          className="hidden cursor-pointer rounded-full px-4 py-3 text-sm font-semibold transition hover:bg-neutral-100 md:block"
         >
           Airbnb your home
         </div>
         <div
           onClick={toggleOpen}
-          className="p-4 md:py-1 md:px-2 border border-neutral-100 rounded-full cursor-pointer transition hover:shadow-md flex items-center gap-3"
+          className="flex cursor-pointer items-center gap-3 rounded-full border border-neutral-100 p-4 transition hover:shadow-md md:px-2 md:py-1"
         >
           <AiOutlineMenu />
           <div className="hidden md:block">
@@ -32,8 +32,8 @@ const UserMenu: FC = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute shadow-md rounded-xl w-[40vw] md:w-3/4 bg-white/80 backdrop-blur-sm right-0 top-12 text-sm">
-          <div className="flex flex-col cursor-pointer">
+        <div className="absolute right-0 top-12 w-[40vw] rounded-xl bg-white/80 text-sm shadow-md backdrop-blur-sm md:w-3/4">
+          <div className="flex cursor-pointer flex-col">
             <>
               <MenuItem label="Login" onClick={() => {}} />
               <MenuItem label="Sign up" onClick={() => {}} />
